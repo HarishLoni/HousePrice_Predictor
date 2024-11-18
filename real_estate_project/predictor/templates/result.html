@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            overflow: hidden; /* Prevent scrollbar */
+        }
+        .navbar {
+            justify-content: center; /* Center the navbar items */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Harish's Real Estate Predictor</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Prediction Result</h1>
+        <div class="alert alert-success text-center" role="alert">
+            The predicted price is: <strong>${{ prediction|floatformat:2 }}</strong>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'predict' %}" class="btn btn-primary">Make Another Prediction</a>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Harish's Real Estate Predictor</p>
+    </footer>
+</body>
+</html>
